@@ -1,4 +1,45 @@
-<h1>Home</h1>
-<!--<button (click)="firstClick()">Click me</button>-->
-<h2>Encuentra tu mesa, reservala ahora...</h2>
 
+<!--&lt;!&ndash;<button (click)="firstClick()">Click me</button>&ndash;&gt;-->
+<!--<h2>Encuentra tu mesa, reservala ahora...</h2>-->
+
+<!--<h3>Stroked Buttons</h3>-->
+<!--<div class="example-button-row">-->
+<!--  <button mat-stroked-button>Basic</button>-->
+<!--  <button mat-stroked-button color="primary">Primary</button>-->
+<!--  <button mat-stroked-button color="accent">Accent</button>-->
+<!--  <button mat-stroked-button color="warn">Warn</button>-->
+<!--  <button mat-stroked-button disabled>Disabled</button>-->
+<!--  <a mat-stroked-button routerLink=".">Link</a>-->
+
+<br>
+<br>
+
+<div class="alert alert-danger" role="alert" *ngIf="message">
+  {{ message }}
+</div>
+
+<form class="form-inline" *ngIf="!authService.getUser()">
+  <div class="form-group">
+    <label for="username">User: </label>
+    <input class="form-control" name="username" #username>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input class="form-control" type="password" name="password" #password>
+  </div>
+
+  <a class="btn btn-default" (click)="login(username.value, password.value)">
+    Login
+  </a>
+</form>
+
+<div class="well" *ngIf="authService.getUser()">
+  Logueado como <b>{{ authService.getUser() }}</b>
+  <app-protected-component></app-protected-component>
+  <a href (click)="logout()">Log out</a>
+</div>
+
+<br>
+<br>
+<br>

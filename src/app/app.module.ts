@@ -10,6 +10,12 @@ import { FooterComponent } from './footer/footer.component';
 import { HelpComponent } from './help/help.component';
 import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
+import {MatButtonModule} from '@angular/material/button';
+import {FormsModule} from '@angular/forms';
+import { ProtectedComponentComponent } from './protected-component/protected-component.component';
+import { AUTH_PROVIDERS} from './auth.service';
+import { LoggedInGuard} from './logged-in.guard';
+
 
 @NgModule({
   declarations: [
@@ -19,14 +25,16 @@ import { NavComponent } from './nav/nav.component';
     FooterComponent,
     HelpComponent,
     AboutComponent,
-    NavComponent
+    NavComponent,
+    ProtectedComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ AUTH_PROVIDERS, LoggedInGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
