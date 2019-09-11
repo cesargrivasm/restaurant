@@ -12,9 +12,9 @@ import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
-import { ProtectedComponentComponent } from './protected-component/protected-component.component';
 import { AUTH_PROVIDERS} from './auth.service';
 import { LoggedInGuard} from './logged-in.guard';
+import { ProtectedComponent } from './protected/protected.component';
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import { LoggedInGuard} from './logged-in.guard';
     HelpComponent,
     AboutComponent,
     NavComponent,
-    ProtectedComponentComponent
+    ProtectedComponent
   ],
   imports: [
     BrowserModule,
