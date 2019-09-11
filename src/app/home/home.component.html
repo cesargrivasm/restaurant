@@ -1,16 +1,4 @@
 
-<!--&lt;!&ndash;<button (click)="firstClick()">Click me</button>&ndash;&gt;-->
-<!--<h2>Encuentra tu mesa, reservala ahora...</h2>-->
-
-<!--<h3>Stroked Buttons</h3>-->
-<!--<div class="example-button-row">-->
-<!--  <button mat-stroked-button>Basic</button>-->
-<!--  <button mat-stroked-button color="primary">Primary</button>-->
-<!--  <button mat-stroked-button color="accent">Accent</button>-->
-<!--  <button mat-stroked-button color="warn">Warn</button>-->
-<!--  <button mat-stroked-button disabled>Disabled</button>-->
-<!--  <a mat-stroked-button routerLink=".">Link</a>-->
-
 <br>
 <br>
 
@@ -35,8 +23,7 @@
 </form>
 
 <div class="well" *ngIf="authService.getUser()">
-  Logueado como <b>{{ authService.getUser() }}</b>
-  <app-protected></app-protected>
+   <app-protected></app-protected>
   <a href (click)="logout()">Log out</a>
 </div>
 
