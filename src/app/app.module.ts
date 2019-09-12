@@ -15,6 +15,10 @@ import {FormsModule} from '@angular/forms';
 import { AUTH_PROVIDERS} from './auth.service';
 import { LoggedInGuard} from './logged-in.guard';
 import { ProtectedComponent } from './protected/protected.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -32,8 +36,11 @@ import { ProtectedComponent } from './protected/protected.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
-  ],
+    FormsModule,
+    BrowserAnimationsModule,
+      ],
+  exports : [
+      ],
   providers: [ AUTH_PROVIDERS, LoggedInGuard],
   bootstrap: [AppComponent]
 })
