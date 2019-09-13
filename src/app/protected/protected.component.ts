@@ -16,12 +16,31 @@ export class ProtectedComponent implements OnInit {
     '8 Personas', '9 Personas', '10 Peronas', '11 Personas', '12 Personas', '13 Personas', '14 Personas',
   '15 Personas', '16 Personas', '17 Personas', '18 Personas', '19 Personas', '20 Personas'];
 
-  constructor() { }
+  opcionSeleccionado: '0';
+  verSeleccion  = '';
+  datos;
+  constructor() {
+    this.datos = [1, 2 , 3, 4, 5, 6, 7, 8, 9, 10];
+  }
 
   ngOnInit() {
   }
 
   Saveinfo() {
     return localStorage.setItem('datos', JSON.stringify(this.hours));
+  }
+  save() {
+    localStorage.setItem('documento', 'meta_title');
+    localStorage.setItem('documento', 'meta_description');
+    localStorage.setItem('documento', 'header');
+  }
+    guardar() {
+    // Pasamos el valor seleccionado a la variable verSeleccion
+    this.verSeleccion = this.opcionSeleccionado;
+    window.localStorage.setItem('fecha', this.verSeleccion);
+    window.localStorage.setItem('reservacion', this.verSeleccion);
+    window.localStorage.setItem('power', this.verSeleccion);
+    window.localStorage.setItem('person', this.verSeleccion)
+    console.log(this.verSeleccion);
   }
 }

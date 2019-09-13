@@ -1,8 +1,9 @@
 <h2>Reserva tu Mesa...</h2>
 
+
 <form>
   Fecha:
-  <input type="date" name="date" min="2019-09-13">
+  <input type="date" name="date" min="2019-09-13" [(ngModel)]="opcionSeleccionado" (change)="guardar()">
 </form>
 
 
@@ -10,14 +11,14 @@
 
 <div class="form-group">
   <label for="power">Reservaciones:</label>
-  <select class="form-control" id="power" required>
+  <select class="form-control" id="power" required [(ngModel)]="opcionSeleccionado" (change)="guardar()">
     <option *ngFor="let pow of hours" [value]="pow">{{pow}}</option>
   </select>
 </div>
 
 <div class="form-group">
   <label for="power">Cantidad de Personas:</label>
-  <select class="form-control" id="person" required>
+  <select class="form-control" id="person" required [(ngModel)]="opcionSeleccionado" (change)="guardar()">
     <option *ngFor="let per of persons" [value]="per">{{per}}</option>
   </select>
 </div>
@@ -28,7 +29,7 @@
     <input type="search" name="restaurantSearch" placeholder="Rep. Dom.,Santo Domingo, PatePalo">
   </form>
 
-  <a href (click)="Saveinfo()">save</a>
+
 <app-nav></app-nav>
 <!-- https://opentable.herokuapp.com/api/restaurants?country=US&city=chicago -->
 
@@ -36,3 +37,10 @@
 var guardado = localStorage.getItem('datos');
 
 console.log('objetoObtenido: ', JSON.parse(guardado)); -->
+
+<select [(ngModel)]="opcionSeleccionado" (change)="guardar()">
+  <option value="0">Selecciona una opción</option>
+  <option *ngFor="let dato of datos">
+    {{dato}}
+  </option>
+</select>

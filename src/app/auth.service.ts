@@ -14,6 +14,9 @@ export class AuthService {
   logout(): any {
     localStorage.removeItem('username');
   }
+  getPerson(): any {
+    return localStorage.getItem('person');
+  }
   getUser(): any {
     return localStorage.getItem('username');
   }
