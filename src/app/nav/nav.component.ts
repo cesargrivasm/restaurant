@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService} from '../data.service';
+import {Country} from "../country";
 
 @Component({
   selector: 'app-nav',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-
-  constructor() { }
+  country: Country;
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+   this.dataService.getCountries().subscribe(data => {
+    console.log(data);
+    this.country = data;
+   });
   }
 
 }

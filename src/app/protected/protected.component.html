@@ -22,7 +22,7 @@
     <option *ngFor="let per of persons" [value]="per">{{per}}</option>
   </select>
 </div>
- <button (click)="guardar()">Guardar</button>
+ <button (click)="guardar()">Guardar Reservacion</button>
 <button (click)="showReservation()">Mostrar Reservacion </button>
 <div *ngIf="reservation!= null || reservation !== undefined">
   Reservacion encontrada : Hora {{reservation.hora}}  Cantidad Personas {{reservation.cantidadDePersonas}} Fecha {{reservation.fecha}}

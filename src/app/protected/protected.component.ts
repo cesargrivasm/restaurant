@@ -24,10 +24,14 @@ export class ProtectedComponent implements OnInit {
   verReservacion = '';
   verPersonas: '0';
   reservation: Reservation;
+  arr: [];
   constructor() {
+
   }
 
   ngOnInit() {
+
+
   }
 
       guardar() {
@@ -44,7 +48,7 @@ export class ProtectedComponent implements OnInit {
 
   showReservation() {
     // Pasamos el valor seleccionado a la variable verSeleccion
-  debugger;
+  // debugger;
     this.reservation = JSON.parse( window.localStorage.getItem('reservation'));
     // console.log(this.verFecha);
   }

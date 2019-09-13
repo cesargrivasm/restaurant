@@ -1,3 +1,43 @@
-<p>
-  nav works!
-</p>
+<h2>Vamos a buscar tu restaurant...</h2>
+
+<ul>
+  Contries : {{country?.count}}
+  <li *ngFor="let con of country?.countries">
+    {{con}}
+
+  </li>
+</ul>
+
+<!--https://opentable.herokuapp.com/api/stats-->
+<!--https://opentable.herokuapp.com/api/-->
+<!--http://opentable.herokuapp.com/api/countries-->
+<!--&lt;!&ndash; Angular &ndash;&gt;-->
+<!--<ul>-->
+<!--  <li *ngFor="let item of items; let i = index">-->
+<!--    {{i}} {{item}}-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<select [(ngModel)]="opcionSeleccionado" (change)="capturar()">-->
+<!--  <option value="0">Selecciona una opción</option>-->
+<!--  <option *ngFor="let dato of datos">-->
+<!--    {{dato}}-->
+<!--  </option>-->
+<!--</select>-->
+
+<!--&lt;!&ndash; Prueba para ver la opción seleccionado &ndash;&gt;-->
+<!--<p [hidden]="opcionSeleccionado == '0'">Haz seleccionado la opción # {{ verSeleccion }}</p>-->
+<!--export class AppComponent  {-->
+<!--datos;-->
+<!--// Seleccionamos o iniciamos el valor '0' del <select>-->
+<!--opcionSeleccionado: string  = '0';-->
+<!--verSeleccion: string        = '';-->
+
+<!--constructor(){-->
+<!--this.datos = [1,2,3,4,5,6,7,8,9,10];-->
+<!--}-->
+
+<!--capturar() {-->
+<!--// Pasamos el valor seleccionado a la variable verSeleccion-->
+<!--this.verSeleccion = this.opcionSeleccionado;-->
+<!--}-->
+<!--  }-->
