@@ -3,27 +3,30 @@
 
 <form>
   Fecha:
-  <input type="date" name="date" min="2019-09-13" [(ngModel)]="opcionSeleccionado" (change)="guardar()">
+  <input type="date" name="date" min="2019-09-13" [(ngModel)]="opcionFecha">
 </form>
 
 
 <br>
 
 <div class="form-group">
-  <label for="power">Reservaciones:</label>
-  <select class="form-control" id="power" required [(ngModel)]="opcionSeleccionado" (change)="guardar()">
+  <label for="reservacion">Reservaciones:</label>
+  <select class="form-control" id="reservacion" required [(ngModel)]="opcionReservacion">
     <option *ngFor="let pow of hours" [value]="pow">{{pow}}</option>
   </select>
 </div>
 
 <div class="form-group">
-  <label for="power">Cantidad de Personas:</label>
-  <select class="form-control" id="person" required [(ngModel)]="opcionSeleccionado" (change)="guardar()">
+  <label for="person">Cantidad de Personas:</label>
+  <select class="form-control" id="person" required [(ngModel)]="opcionPersonas" >
     <option *ngFor="let per of persons" [value]="per">{{per}}</option>
   </select>
 </div>
-
-
+ <button (click)="guardar()">Guardar</button>
+<button (click)="showReservation()">Mostrar Reservacion </button>
+<div *ngIf="reservation!= null || reservation !== undefined">
+  Reservacion encontrada : Hora {{reservation.hora}}  Cantidad Personas {{reservation.cantidadDePersonas}} Fecha {{reservation.fecha}}
+</div>
   <form>
     Buscar Restaurant:
     <input type="search" name="restaurantSearch" placeholder="Rep. Dom.,Santo Domingo, PatePalo">
@@ -38,9 +41,9 @@ var guardado = localStorage.getItem('datos');
 
 console.log('objetoObtenido: ', JSON.parse(guardado)); -->
 
-<select [(ngModel)]="opcionSeleccionado" (change)="guardar()">
-  <option value="0">Selecciona una opción</option>
-  <option *ngFor="let dato of datos">
-    {{dato}}
-  </option>
-</select>
+<!--<select [(ngModel)]="opcionSeleccionado" (change)="guardar()">-->
+<!--  <option value="0">Selecciona una opción</option>-->
+<!--  <option *ngFor="let dato of datos">-->
+<!--    {{dato}}-->
+<!--  </option>-->
+<!--</select>-->
