@@ -21,4 +21,7 @@ export class ProtectedComponent implements OnInit {
   ngOnInit() {
   }
 
+  Saveinfo() {
+    return localStorage.setItem('datos', JSON.stringify(this.hours));
+  }
 }
