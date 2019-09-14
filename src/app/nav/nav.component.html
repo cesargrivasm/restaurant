@@ -8,6 +8,14 @@
   </li>
 </ul>
 
+<div class="form-group">
+  <label for="pais">Selecciona el Pais:</label>
+  <select class="form-control" id="pais" >
+    <option *ngFor="let con of country?.countries">{{con}}</option>
+    console.log(con)
+  </select>
+</div>
+
 <!--https://opentable.herokuapp.com/api/stats-->
 <!--https://opentable.herokuapp.com/api/-->
 <!--http://opentable.herokuapp.com/api/countries-->
@@ -41,3 +49,11 @@
 <!--this.verSeleccion = this.opcionSeleccionado;-->
 <!--}-->
 <!--  }-->
+
+<div class="form-group">
+  <label for="pais">Selecciona la ciudad:</label>
+  <select class="form-control" id="pais" >
+    <option *ngFor="let con of country?.countries">{{con}}</option>
+    console.log(con)
+  </select>
+</div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService} from '../data.service';
-import {Country} from "../country";
+import {Country} from '../country';
 
 @Component({
   selector: 'app-nav',

@@ -19,6 +19,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MapaComponent } from './mapa/mapa.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     HelpComponent,
     AboutComponent,
     NavComponent,
-    ProtectedComponent
+    ProtectedComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
